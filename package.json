@@ -1,0 +1,48 @@
+{
+  "name": "@iotch/http-client",
+  "version": "0.1.0",
+  "description": "Typescript XMLHttpRequest2 wrapper with basic progress support",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib/*",
+    "test": "TS_NODE_PROJECT=test/tsconfig.json TS_NODE_CACHE=false mocha --use_strict --compilers ts:ts-node/register test/**/*.ts",
+    "build": "npm run test && npm run clean && tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iotch/http-client.git"
+  },
+  "keywords": [
+    "http",
+    "client",
+    "xhr2",
+    "request"
+  ],
+  "author": "iotch",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/iotch/http-client/issues"
+  },
+  "homepage": "https://github.com/iotch/http-client",
+  "dependencies": {
+    "@iotch/query-string": "git://github.com/iotch/query-string.git#v0.1.3",
+    "es6-promise": "^4.1.1",
+    "tslib": "^1.7.1"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.0.3",
+    "@types/jsdom": "^11.0.1",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^8.0.20",
+    "@types/sinon": "^2.3.3",
+    "chai": "*",
+    "jsdom": "^11.1.0",
+    "jsdom-global": "^3.0.2",
+    "mocha": "*",
+    "rimraf": "^2.6.1",
+    "sinon": "^3.2.0",
+    "ts-node": "^3.3.0",
+    "typescript": "^2.4.2"
+  }
+}
